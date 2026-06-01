@@ -93,14 +93,12 @@ program
     }
   });
 
-
+//npm install commander chalk ora fs-extra dotenv
 program.parse(process.argv);
 
 
 
-//npm init -y
-//npm install commander chalk ora fs-extra dotenv
-//npm link
-//expressoot "test"
+
+
 
 
