@@ -10,9 +10,7 @@ import 'dotenv/config';
 
 import 'dotenv/config';
 const API_KEY = "here api"; 
-
 const program = new Command();
-
 program
   .version('1.0.0')
   .description('A CLI tool to generate code projects using Gemini')
@@ -24,18 +22,15 @@ program
     const spinner = ora(`Asking Gemini (Directly) to build: "${prompt}"...`).start();
 
     try {
-    
       const payload = {
         contents: [{
           parts: [{
             text: `
               You are an expert full-stack developer. 
               The user wants a web application. 
-              
               You must output ONLY a valid JSON array. 
               Do not output markdown, explanations, or code blocks.
               The JSON array must contain objects with "filename" and "content".
-              
               Request: "${prompt}"
             `
           }]
@@ -57,24 +52,15 @@ program
       }
 
       const data = await response.json();
-      
-    
       const generatedText = data.candidates[0].content.parts[0].text;
-      
-    
       const cleanJson = generatedText.replace(/```json/g, '').replace(/```/g, '');
-
-   
       let files;
       try {
         files = JSON.parse(cleanJson);
       } catch (e) {
         throw new Error("Gemini returned text, but it wasn't valid JSON. Try again.");
       }
-
       spinner.text = 'Writing files to disk...';
-
-     
       if (!fs.existsSync(outputDir)) {
         fs.mkdirSync(outputDir, { recursive: true });
       }
