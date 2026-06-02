@@ -71,6 +71,8 @@ program
         console.log(chalk.green(`✔ Created: ${file.filename}`));
       }
 
+
+
       spinner.succeed(chalk.blue(`Success! Project created in /${options.dir}`));
 
     } catch (error) {
@@ -79,15 +81,75 @@ program
     }
   });
 
-//npm install commander chalk ora fs-extra dotenv
+
 program.parse(process.argv);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 //AQ.Ab8RN6L[(##)##]5qcajC23Qnf_YuvUxlDC[(##)]8RCx6-m3m3hX_[(##)]iey9eFZXkA
 //AQ.Ab8RN6[##]JLKcBfnZuW3hRQ[########]nDPsiF3USjezL_[######]awKChy-i_AjKETiQ
+//AQ.Ab8RN6Jr5[###]dwbud6BReoZBrOBG8k[####]XWu6b0emuiXUnwF98[###]bShoyQ
+
 //AQ.Ab8RN6LKYm9Ixx[######]MWcticmmF9G-[###]o6KvHU1XhrqXlpg[###]nRXgo3fBw
 //AQ.Ab8RN6LQzMt2BK[####]JyZU2k1qZeqx[####]gJOyoEudgxntNVq6vj[##]s4Ozww
 //AQ.Ab8RN6KUo9pD[####]86WXW3QDye_8c0kSG-[###]wB1OF9MgjxMRv[###]_ePYD2g
+
+
+
+
+
 
 
 
